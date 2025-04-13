@@ -1,0 +1,20 @@
+public class com/newardassociates/demo/InstructionDemos {
+    public static getTestValue()java/lang/String {
+        ldc "Test Value"
+        areturn
+    }
+    
+    public static simpleIntReturn()I {
+        iconst 5
+        ireturn
+    }
+
+    public static simpleConstantReturn()I {
+        ldc 432
+        ireturn
+    }
+
+    public static stackFun()V {
+    }
+
+}
