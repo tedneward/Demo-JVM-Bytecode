@@ -1,4 +1,4 @@
-public class com/newardassociates/jasm/demo/MessageProvider {
+public class com/newardassociates/demo/MessageProvider {
     public getMessage()java/lang/String {
          ldc "Hello, World"
          areturn

@@ -4,16 +4,13 @@ plugins {
     application
 }
 
-group = "com.roscopeco.jasm"
-version = "0.1-SNAPSHOT"
-
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
 }
 
 application {
-    mainClass.set("com.roscopeco.jasm.example.HelloWorld")
+    mainClass.set("com.newardassociates.demo.App")
 }
 
 repositories {

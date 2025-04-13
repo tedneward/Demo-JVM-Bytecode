@@ -1,4 +1,4 @@
-package com.newardassociates.jasm.demo;
+package com.newardassociates.demo;
 
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-public class com/newardassociates/jasm/demo/TestClass {
+public class com/newardassociates/demo/TestClass {
     public static getTestValue()java/lang/String {
         ldc "Test Value"
         areturn
