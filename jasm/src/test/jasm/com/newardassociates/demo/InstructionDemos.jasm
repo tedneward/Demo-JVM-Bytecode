@@ -1,7 +1,25 @@
 public class com/newardassociates/demo/InstructionDemos {
+    public static stackFun()V {
+        // {{## BEGIN simple-stack ##}}
+        iconst 0    // push raw "0" constant on stack
+        dup         // dupe it (two 0's on top of stack)
+        pop         // pop one right back off
+        pop         // pop the second
+        bipush 27   // push a constant (byte) value
+        sipush 1234 // push a constant (short) value 
+        ldc "Hi!"   // load a CP entry and push it
+        // {{## END simple-stack ##}}
+        pop
+        pop
+        pop
+        return
+    }
+
     public static getTestValue()java/lang/String {
+        /* {{## BEGIN push-constant ##}} */
         ldc "Test Value"
         areturn
+        /* {{## END push-constant ##}} */
     }
     
     public static simpleIntReturn()I {
@@ -13,8 +31,4 @@ public class com/newardassociates/demo/InstructionDemos {
         ldc 432
         ireturn
     }
-
-    public static stackFun()V {
-    }
-
 }
