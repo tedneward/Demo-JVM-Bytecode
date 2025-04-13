@@ -1,0 +1,6 @@
+public class com/newardassociates/jasm/demo/TestClass {
+    public static getTestValue()java/lang/String {
+        ldc "Test Value"
+        areturn
+    }
+}
