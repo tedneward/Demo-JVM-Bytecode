@@ -1,3 +1,4 @@
 #!/bin/bash
 
-javap -v -classpath app/build/classes/java/main com.newardassociates.demo.$1
+javap -classpath app/build/classes/java/main com.newardassociates.demo.$1
+#javap -verbose -private -classpath app/build/classes/java/main com.newardassociates.demo.$1
