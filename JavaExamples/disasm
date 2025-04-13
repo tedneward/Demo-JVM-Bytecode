@@ -1,0 +1,3 @@
+#!/bin/bash
+
+javap -v -classpath app/build/classes/java/main com.newardassociates.demo.$1
