@@ -5,6 +5,37 @@
  * For more details on building Java & JVM projects, please refer to https://docs.gradle.org/8.13/userguide/building_java_projects.html in the Gradle documentation.
  */
 
+open class SystemProcess: DefaultTask() {
+    @Internal lateinit var command: String
+    @Internal lateinit var workingDir: String
+    @Internal lateinit var arguments: List<String>
+    @Internal var projectDir: File = project.projectDir
+ 
+    @TaskAction
+    fun runCommand() {
+        val res = (command + " " + arguments.joinToString(" ")).runCommand(workingDir)
+        print(res)
+    }
+ 
+    private fun String.runCommand(workingDirStr: String): String? {
+        return try {
+            val workingDir = File(projectDir, workingDirStr)
+            val parts = this.split("\\s".toRegex())
+            val proc = ProcessBuilder(*parts.toTypedArray())
+                    .directory(workingDir)
+                    .redirectOutput(ProcessBuilder.Redirect.PIPE)
+                    .redirectError(ProcessBuilder.Redirect.PIPE)
+                    .start()
+ 
+            proc.waitFor(60, TimeUnit.MINUTES)
+            proc.inputStream.bufferedReader().readText()
+        } catch(e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+}
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
@@ -33,4 +64,13 @@ java {
 application {
     // Define the main class for the application.
     mainClass = "com.newardassociates.demo.App"
+}
+
+tasks.register<SystemProcess>("disassemble") {
+    group = "build"
+    description = "Produce listings of disassembled classes"
+    command = "javap"
+    workingDir =  "./build/classes/java/main"
+    arguments = listOf("-v", "com/newardassociates/demo/App.class")
+    dependsOn("compileJava")
 }
