@@ -36,6 +36,38 @@ open class SystemProcess: DefaultTask() {
     }
 }
 
+open class Javap: DefaultTask() {
+    @Internal lateinit var workingDir: String
+    @Internal lateinit var classFile: String
+    @Internal lateinit var javapArguments: List<String>
+    @Internal var projectDir = project.projectDir
+
+    @TaskAction
+    fun runCommand() {
+        val cl = ("javap " + javapArguments.joinToString(" ") + " " + classFile)
+        println("Executing: " + cl)
+        val res = cl.runCommand(workingDir)
+        println(res)
+    }
+    private fun String.runCommand(workingDirStr: String): String? {
+        return try {
+            val workingDir = File(projectDir, workingDirStr)
+            val parts = this.split("\\s".toRegex())
+            val proc = ProcessBuilder(*parts.toTypedArray())
+                    .directory(workingDir)
+                    .redirectOutput(ProcessBuilder.Redirect.PIPE)
+                    .redirectError(ProcessBuilder.Redirect.PIPE)
+                    .start()
+ 
+            proc.waitFor(60, TimeUnit.MINUTES)
+            proc.inputStream.bufferedReader().readText()
+        } catch(e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+}
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
@@ -72,5 +104,13 @@ tasks.register<SystemProcess>("disassemble") {
     command = "javap"
     workingDir =  "./build/classes/java/main"
     arguments = listOf("-v", "com/newardassociates/demo/App.class")
+    dependsOn("compileJava")
+}
+tasks.register<Javap>("disasm") {
+    group = "build"
+    description = "Produce listings of disassembled classes"
+    workingDir =  "./build/classes/java/main"
+    javapArguments = listOf("-v")
+    classFile = "com/newardassociates/demo/App.class"
     dependsOn("compileJava")
 }
