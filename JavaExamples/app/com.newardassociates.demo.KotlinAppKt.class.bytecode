@@ -1,0 +1,102 @@
+Classfile /mnt/c/Users/Ted/Projects/Demos/Demo-JVM-Bytecode/JavaExamples/app/build/classes/kotlin/main/com/newardassociates/demo/KotlinAppKt.class
+  Last modified Apr 18, 2025; size 782 bytes
+  SHA-256 checksum db69257777083149b5d982ed171f429367a9e2a747418bcd3941bc0e850565c4
+  Compiled from "KotlinApp.kt"
+public final class com.newardassociates.demo.KotlinAppKt
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // com/newardassociates/demo/KotlinAppKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 2
+Constant pool:
+   #1 = Utf8               com/newardassociates/demo/KotlinAppKt
+   #2 = Class              #1             // com/newardassociates/demo/KotlinAppKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Utf8               com/newardassociates/demo/KotlinApp
+   #8 = Class              #7             // com/newardassociates/demo/KotlinApp
+   #9 = Utf8               <init>
+  #10 = NameAndType        #9:#6          // "<init>":()V
+  #11 = Methodref          #8.#10         // com/newardassociates/demo/KotlinApp."<init>":()V
+  #12 = Utf8               getGreeting
+  #13 = Utf8               ()Ljava/lang/String;
+  #14 = NameAndType        #12:#13        // getGreeting:()Ljava/lang/String;
+  #15 = Methodref          #8.#14         // com/newardassociates/demo/KotlinApp.getGreeting:()Ljava/lang/String;
+  #16 = Utf8               java/lang/System
+  #17 = Class              #16            // java/lang/System
+  #18 = Utf8               out
+  #19 = Utf8               Ljava/io/PrintStream;
+  #20 = NameAndType        #18:#19        // out:Ljava/io/PrintStream;
+  #21 = Fieldref           #17.#20        // java/lang/System.out:Ljava/io/PrintStream;
+  #22 = Utf8               java/io/PrintStream
+  #23 = Class              #22            // java/io/PrintStream
+  #24 = Utf8               println
+  #25 = Utf8               (Ljava/lang/Object;)V
+  #26 = NameAndType        #24:#25        // println:(Ljava/lang/Object;)V
+  #27 = Methodref          #23.#26        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #28 = Utf8               ([Ljava/lang/String;)V
+  #29 = NameAndType        #5:#6          // main:()V
+  #30 = Methodref          #2.#29         // com/newardassociates/demo/KotlinAppKt.main:()V
+  #31 = Utf8               args
+  #32 = Utf8               [Ljava/lang/String;
+  #33 = Utf8               Lkotlin/Metadata;
+  #34 = Utf8               mv
+  #35 = Integer            2
+  #36 = Integer            1
+  #37 = Integer            0
+  #38 = Utf8               k
+  #39 = Utf8               xi
+  #40 = Integer            48
+  #41 = Utf8               d1
+  #42 = Utf8               \u0000\b\n\u0000\n\u0002\u0010\u0002\n\u0000\u001a\u0006\u0010\u0000\u001a\u00020\u0001¨\u0006\u0002
+  #43 = Utf8               d2
+  #44 = Utf8
+  #45 = Utf8               app
+  #46 = Utf8               KotlinApp.kt
+  #47 = Utf8               Code
+  #48 = Utf8               LineNumberTable
+  #49 = Utf8               LocalVariableTable
+  #50 = Utf8               SourceFile
+  #51 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=2, locals=0, args_size=0
+         0: new           #8                  // class com/newardassociates/demo/KotlinApp
+         3: dup
+         4: invokespecial #11                 // Method com/newardassociates/demo/KotlinApp."<init>":()V
+         7: invokevirtual #15                 // Method com/newardassociates/demo/KotlinApp.getGreeting:()Ljava/lang/String;
+        10: getstatic     #21                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        13: swap
+        14: invokevirtual #27                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+        17: return
+      LineNumberTable:
+        line 14: 0
+        line 15: 17
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #30                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+SourceFile: "KotlinApp.kt"
+RuntimeVisibleAnnotations:
+  0: #33(#34=[I#35,I#36,I#37],#38=I#35,#39=I#40,#41=[s#42],#43=[s#5,s#44,s#45])
+    kotlin.Metadata(
+      mv=[2,1,0]
+      k=2
+      xi=48
+      d1=["\u0000\b\n\u0000\n\u0002\u0010\u0002\n\u0000\u001a\u0006\u0010\u0000\u001a\u00020\u0001¨\u0006\u0002"]
+      d2=["main","","app"]
+    )

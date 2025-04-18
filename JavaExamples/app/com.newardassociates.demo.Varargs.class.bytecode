@@ -1,0 +1,130 @@
+Classfile /mnt/c/Users/Ted/Projects/Demos/Demo-JVM-Bytecode/JavaExamples/app/build/classes/java/main/com/newardassociates/demo/Varargs.class
+  Last modified Apr 13, 2025; size 1129 bytes
+  SHA-256 checksum 40ea8919d11e2203322d02e8513e155e2ab386fac3c355af39353b3587dec8e8
+  Compiled from "Varargs.java"
+public class com.newardassociates.demo.Varargs
+  minor version: 0
+  major version: 65
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #23                         // com/newardassociates/demo/Varargs
+  super_class: #2                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 3
+Constant pool:
+   #1 = Methodref          #2.#3          // java/lang/Object."<init>":()V
+   #2 = Class              #4             // java/lang/Object
+   #3 = NameAndType        #5:#6          // "<init>":()V
+   #4 = Utf8               java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = Fieldref           #8.#9          // java/lang/System.out:Ljava/io/PrintStream;
+   #8 = Class              #10            // java/lang/System
+   #9 = NameAndType        #11:#12        // out:Ljava/io/PrintStream;
+  #10 = Utf8               java/lang/System
+  #11 = Utf8               out
+  #12 = Utf8               Ljava/io/PrintStream;
+  #13 = InvokeDynamic      #0:#14         // #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #14 = NameAndType        #15:#16        // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #15 = Utf8               makeConcatWithConstants
+  #16 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #17 = Methodref          #18.#19        // java/io/PrintStream.println:(Ljava/lang/String;)V
+  #18 = Class              #20            // java/io/PrintStream
+  #19 = NameAndType        #21:#22        // println:(Ljava/lang/String;)V
+  #20 = Utf8               java/io/PrintStream
+  #21 = Utf8               println
+  #22 = Utf8               (Ljava/lang/String;)V
+  #23 = Class              #24            // com/newardassociates/demo/Varargs
+  #24 = Utf8               com/newardassociates/demo/Varargs
+  #25 = Utf8               Code
+  #26 = Utf8               LineNumberTable
+  #27 = Utf8               LocalVariableTable
+  #28 = Utf8               this
+  #29 = Utf8               Lcom/newardassociates/demo/Varargs;
+  #30 = Utf8               main
+  #31 = Utf8               ([Ljava/lang/String;)V
+  #32 = Utf8               a
+  #33 = Utf8               Ljava/lang/String;
+  #34 = Utf8               args
+  #35 = Utf8               [Ljava/lang/String;
+  #36 = Utf8               StackMapTable
+  #37 = Class              #35            // "[Ljava/lang/String;"
+  #38 = Utf8               SourceFile
+  #39 = Utf8               Varargs.java
+  #40 = Utf8               BootstrapMethods
+  #41 = String             #42            // Received arg: \u0001
+  #42 = Utf8               Received arg: \u0001
+  #43 = MethodHandle       6:#44          // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #44 = Methodref          #45.#46        // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #45 = Class              #47            // java/lang/invoke/StringConcatFactory
+  #46 = NameAndType        #15:#48        // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #47 = Utf8               java/lang/invoke/StringConcatFactory
+  #48 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #49 = Utf8               InnerClasses
+  #50 = Class              #51            // java/lang/invoke/MethodHandles$Lookup
+  #51 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #52 = Class              #53            // java/lang/invoke/MethodHandles
+  #53 = Utf8               java/lang/invoke/MethodHandles
+  #54 = Utf8               Lookup
+{
+  public com.newardassociates.demo.Varargs();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 6: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/newardassociates/demo/Varargs;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=5, args_size=1
+         0: aload_0
+         1: astore_1
+         2: aload_1
+         3: arraylength
+         4: istore_2
+         5: iconst_0
+         6: istore_3
+         7: iload_3
+         8: iload_2
+         9: if_icmpge     36
+        12: aload_1
+        13: iload_3
+        14: aaload
+        15: astore        4
+        17: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        20: aload         4
+        22: invokedynamic #13,  0             // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        27: invokevirtual #17                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        30: iinc          3, 1
+        33: goto          7
+        36: return
+      LineNumberTable:
+        line 8: 0
+        line 9: 17
+        line 8: 30
+        line 11: 36
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           17      13     4     a   Ljava/lang/String;
+            0      37     0  args   [Ljava/lang/String;
+      StackMapTable: number_of_entries = 2
+        frame_type = 254 /* append */
+          offset_delta = 7
+          locals = [ class "[Ljava/lang/String;", int, int ]
+        frame_type = 248 /* chop */
+          offset_delta = 28
+}
+SourceFile: "Varargs.java"
+BootstrapMethods:
+  0: #43 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #41 Received arg: \u0001
+InnerClasses:
+  public static final #54= #50 of #52;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles

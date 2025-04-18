@@ -1,0 +1,89 @@
+Classfile /mnt/c/Users/Ted/Projects/Demos/Demo-JVM-Bytecode/JavaExamples/app/build/classes/kotlin/main/com/newardassociates/demo/KotlinApp.class
+  Last modified Apr 18, 2025; size 752 bytes
+  SHA-256 checksum 3265a12ca54e3f6a98b13172fc220053a5d6ec563cdfb8875c85e43ddc3cd24b
+  Compiled from "KotlinApp.kt"
+public final class com.newardassociates.demo.KotlinApp
+  minor version: 0
+  major version: 65
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // com/newardassociates/demo/KotlinApp
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 2
+Constant pool:
+   #1 = Utf8               com/newardassociates/demo/KotlinApp
+   #2 = Class              #1             // com/newardassociates/demo/KotlinApp
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = NameAndType        #5:#6          // "<init>":()V
+   #8 = Methodref          #4.#7          // java/lang/Object."<init>":()V
+   #9 = Utf8               this
+  #10 = Utf8               Lcom/newardassociates/demo/KotlinApp;
+  #11 = Utf8               getGreeting
+  #12 = Utf8               ()Ljava/lang/String;
+  #13 = Utf8               Lorg/jetbrains/annotations/NotNull;
+  #14 = Utf8               Hello World!
+  #15 = String             #14            // Hello World!
+  #16 = Utf8               Lkotlin/Metadata;
+  #17 = Utf8               mv
+  #18 = Integer            2
+  #19 = Integer            1
+  #20 = Integer            0
+  #21 = Utf8               k
+  #22 = Utf8               xi
+  #23 = Integer            48
+  #24 = Utf8               d1
+  #25 = Utf8               \u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003R\u0011\u0010\u0004\u001a\u00020\u00058F¢\u0006\u0006\u001a\u0004\b\u0006\u0010\u0007¨\u0006\b
+  #26 = Utf8               d2
+  #27 = Utf8
+  #28 = Utf8               greeting
+  #29 = Utf8               app
+  #30 = Utf8               KotlinApp.kt
+  #31 = Utf8               Code
+  #32 = Utf8               LineNumberTable
+  #33 = Utf8               LocalVariableTable
+  #34 = Utf8               RuntimeInvisibleAnnotations
+  #35 = Utf8               SourceFile
+  #36 = Utf8               RuntimeVisibleAnnotations
+{
+  public com.newardassociates.demo.KotlinApp();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 6: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/newardassociates/demo/KotlinApp;
+
+  public final java.lang.String getGreeting();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=1, locals=1, args_size=1
+         0: ldc           #15                 // String Hello World!
+         2: areturn
+      LineNumberTable:
+        line 9: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       3     0  this   Lcom/newardassociates/demo/KotlinApp;
+    RuntimeInvisibleAnnotations:
+      0: #13()
+        org.jetbrains.annotations.NotNull
+}
+SourceFile: "KotlinApp.kt"
+RuntimeVisibleAnnotations:
+  0: #16(#17=[I#18,I#19,I#20],#21=I#19,#22=I#23,#24=[s#25],#26=[s#10,s#27,s#5,s#6,s#28,s#27,s#11,s#12,s#29])
+    kotlin.Metadata(
+      mv=[2,1,0]
+      k=1
+      xi=48
+      d1=["\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003R\u0011\u0010\u0004\u001a\u00020\u00058F¢\u0006\u0006\u001a\u0004\b\u0006\u0010\u0007¨\u0006\b"]
+      d2=["Lcom/newardassociates/demo/KotlinApp;","","<init>","()V","greeting","","getGreeting","()Ljava/lang/String;","app"]
+    )
