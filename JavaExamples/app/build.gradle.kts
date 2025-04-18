@@ -1,19 +1,19 @@
 open class Javap: DefaultTask() {
     @Internal var workingDir = "./build/classes/java/main"
     @Internal var outputDir: String = ""
-    @Internal lateinit var classFile: String
+    @Internal lateinit var classFiles: List<String>
     @Internal lateinit var javapArguments: List<String>
     @Internal var projectDir = project.projectDir
 
     @TaskAction
     fun runCommand() {
-        val cl = ("javap " + javapArguments.joinToString(" ") + " " + classFile + ".class")
-        println("Executing ${cl}")
-        val res = runCommand(cl)
-        println("Result: ${res}")
+        for (classFile in classFiles) {
+            println(runCommand(classFile))
+        }
     }
-    fun runCommand(commandLine: String): String? {
-        return try {
+    fun runCommand(classFile: String): String {
+        val commandLine = ("javap " + javapArguments.joinToString(" ") + " " + classFile)
+        try {
             val workingDir = File(projectDir, workingDir)
             val outputDir = File(projectDir, outputDir)
             val parts = commandLine.split("\\s".toRegex())
@@ -25,12 +25,12 @@ open class Javap: DefaultTask() {
                     .redirectOutput(outputFile)
                     .redirectError(ProcessBuilder.Redirect.PIPE)
                     .start()
- 
+
             proc.waitFor(60, TimeUnit.MINUTES)
-            proc.inputStream.bufferedReader().readText()
+            return "Success processing ${classFile}"
         } catch(e: Exception) {
             e.printStackTrace()
-            null
+            return "Failure processing ${classFile}: ${e.message}"
         }
     }
 }
@@ -70,6 +70,13 @@ tasks.register<Javap>("disasm") {
     description = "Produce listings of disassembled classes"
     javapArguments = listOf("-v")
     outputDir = "src/main/java/com/newardassociates/demo"
-    classFile = "com/newardassociates/demo/App.class"
+    classFiles = listOf(
+        "com/newardassociates/demo/App.class",
+        "com/newardassociates/demo/Greeter.class",
+        "com/newardassociates/demo/Outer.class",
+        "com/newardassociates/demo/Outer\$Inner.class",
+        "com/newardassociates/demo/StringConcat.class",
+        "com/newardassociates/demo/Varargs.class",
+    )
     dependsOn("compileJava")
 }
