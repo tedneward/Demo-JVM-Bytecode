@@ -69,6 +69,7 @@ Constant pool:
   public static void main(java.lang.String[]);
     descriptor: ([Ljava/lang/String;)V
     flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+// {{## BEGIN hello-world-code ##}}
     Code:
       stack=3, locals=1, args_size=1
          0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
@@ -78,6 +79,7 @@ Constant pool:
         10: invokevirtual #16                 // Method com/newardassociates/demo/Greeter.getGreeting:()Ljava/lang/String;
         13: invokevirtual #20                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
         16: return
+// {{## END hello-world-code ##}}
       LineNumberTable:
         line 8: 0
         line 9: 16
