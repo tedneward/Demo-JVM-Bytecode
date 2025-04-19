@@ -1,3 +1,6 @@
+// Contents of this file are modified from the javap-generated results
+// This file is NOT overwritten by "gradlew disasm"
+//
 Classfile /mnt/c/Users/Ted/Projects/Demos/Demo-JVM-Bytecode/JavaExamples/app/build/classes/java/main/com/newardassociates/demo/App.class
   Last modified Apr 13, 2025; size 646 bytes
   SHA-256 checksum a72cda120e570ba4005675bdbd60111b37ae4ebc4f67d438185b16d077330356

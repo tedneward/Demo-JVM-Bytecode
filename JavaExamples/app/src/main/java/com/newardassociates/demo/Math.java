@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.newardassociates.demo;
 
 public class Math {
@@ -15,7 +18,7 @@ public class Math {
     // {{## END add-with-locals ##}}
     // {{## BEGIN sum-array ##}}
     public static int sumArray() {
-        int[] numbers = {1, 2, 3};
+        int[] numbers = {12, 21, 37};
         int total = 0;
         for (int i : numbers) {
             total += i;
@@ -23,8 +26,12 @@ public class Math {
         return total;
     }
     // {{## END sum-array ##}}
+
+    // These are here to help pick out where
+    // array-initialization leaves off and
+    // iteration begins.
     public static int sumArray_newarray() {
-        int[] numbers = {1, 2, 3};
+        int[] numbers = {12, 21, 37};
         return -1;
     }
     public static int sumArray_iterate(int[] numbers) {

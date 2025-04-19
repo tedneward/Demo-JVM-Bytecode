@@ -1,6 +1,6 @@
 Classfile /mnt/c/Users/Ted/Projects/Demos/Demo-JVM-Bytecode/JavaExamples/app/build/classes/java/main/com/newardassociates/demo/Outer.class
-  Last modified Apr 17, 2025; size 1240 bytes
-  SHA-256 checksum 464f85d38ff2b41b8234253ffe0edf13082a50586f31e23c04614df8a2a83155
+  Last modified Apr 18, 2025; size 1240 bytes
+  SHA-256 checksum 8b181c498dcf36c3e445e8e8490c8c44987c09fe552c7cdf7d4b73d9e3de02cb
   Compiled from "Outer.java"
 public class com.newardassociates.demo.Outer
   minor version: 0
@@ -73,7 +73,7 @@ Constant pool:
          1: invokespecial #1                  // Method java/lang/Object."<init>":()V
          4: return
       LineNumberTable:
-        line 3: 0
+        line 6: 0
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
             0       5     0  this   Lcom/newardassociates/demo/Outer;
@@ -89,7 +89,7 @@ Constant pool:
          5: invokespecial #9                  // Method com/newardassociates/demo/Outer$Inner."<init>":(Lcom/newardassociates/demo/Outer;)V
          8: areturn
       LineNumberTable:
-        line 8: 0
+        line 11: 0
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
             0       9     0  this   Lcom/newardassociates/demo/Outer;
@@ -104,7 +104,7 @@ Constant pool:
          4: invokespecial #14                 // Method com/newardassociates/demo/Outer$StaticInner."<init>":()V
          7: areturn
       LineNumberTable:
-        line 15: 0
+        line 18: 0
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
             0       8     0  this   Lcom/newardassociates/demo/Outer;
@@ -138,12 +138,12 @@ Constant pool:
         40: astore        5
         42: return
       LineNumberTable:
-        line 19: 0
-        line 21: 8
-        line 22: 13
-        line 24: 27
-        line 25: 33
-        line 26: 42
+        line 22: 0
+        line 24: 8
+        line 25: 13
+        line 27: 27
+        line 28: 33
+        line 29: 42
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
             0      43     0  args   [Ljava/lang/String;

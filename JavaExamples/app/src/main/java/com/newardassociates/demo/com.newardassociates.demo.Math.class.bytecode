@@ -1,3 +1,6 @@
+// Contents of this file are modified from the javap-generated results
+// This file is NOT overwritten by "gradlew disasm"
+//
 Classfile /mnt/c/Users/Ted/Projects/Demos/Demo-JVM-Bytecode/JavaExamples/app/build/classes/java/main/com/newardassociates/demo/Math.class
   Last modified Apr 18, 2025; size 709 bytes
   SHA-256 checksum 7e657485a091c9cbd3b53211b16deff88b2b3c3c494d831ce23c8dd1da4e334e
@@ -112,47 +115,49 @@ Constant pool:
     Code:
       stack=4, locals=6, args_size=0
 // {{## END sum-array-code-prefix ##}}
-// {{## BEGIN sum-array-code-newarray ##}}
+// {{## BEGIN sum-array-initialize ##}}
          0: iconst_3
          1: newarray       int
          3: dup
-// {{## END sum-array-code-newarray ##}}
          4: iconst_0
-         5: iconst_1
-         6: iastore
-         7: dup
-         8: iconst_1
-         9: iconst_2
-        10: iastore
-        11: dup
-        12: iconst_2
-        13: iconst_3
-        14: iastore
-        15: astore_0
-        16: iconst_0
-        17: istore_1
-        18: aload_0
-        19: astore_2
-        20: aload_2
-        21: arraylength
-        22: istore_3
-        23: iconst_0
-        24: istore        4
-        26: iload         4
-        28: iload_3
-        29: if_icmpge     49
-        32: aload_2
-        33: iload         4
-        35: iaload
-        36: istore        5
-        38: iload_1
-        39: iload         5
-        41: iadd
-        42: istore_1
-        43: iinc          4, 1
-        46: goto          26
-        49: iload_1
-        50: ireturn
+         5: bipush        12
+         7: iastore
+         8: dup
+         9: iconst_1
+        10: bipush        21
+        12: iastore
+        13: dup
+        14: iconst_2
+        15: bipush        37
+        17: iastore
+        18: astore_0
+// {{## END sum-array-initialize ##}}
+// {{## BEGIN sum-array-iterate ##}}
+        19: iconst_0
+        20: istore_1
+        21: aload_0
+        22: astore_2
+        23: aload_2
+        24: arraylength
+        25: istore_3
+        26: iconst_0
+        27: istore        4
+        29: iload         4
+        31: iload_3
+        32: if_icmpge     52
+        35: aload_2
+        36: iload         4
+        38: iaload
+        39: istore        5
+        41: iload_1
+        42: iload         5
+        44: iadd
+        45: istore_1
+        46: iinc          4, 1
+        49: goto          29
+// {{## END sum-array-iterate ##}}
+        52: iload_1
+        53: ireturn
       LineNumberTable:
         line 18: 0
         line 19: 16

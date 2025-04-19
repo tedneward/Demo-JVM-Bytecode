@@ -1,6 +1,6 @@
 Classfile /mnt/c/Users/Ted/Projects/Demos/Demo-JVM-Bytecode/JavaExamples/app/build/classes/java/main/com/newardassociates/demo/Outer$Inner.class
-  Last modified Apr 17, 2025; size 539 bytes
-  SHA-256 checksum 9c78d77ba92e40ace4469fa910fa456f2d9b3284f02d3ac88fe761983f6dee45
+  Last modified Apr 18, 2025; size 539 bytes
+  SHA-256 checksum eb81e534da583759cd1496e06edac4fe1e12cff7fc99864638095c9c0d2db4db
   Compiled from "Outer.java"
 public class com.newardassociates.demo.Outer$Inner
   minor version: 0
@@ -45,7 +45,7 @@ Constant pool:
          1: invokespecial #1                  // Method java/lang/Object."<init>":()V
          4: return
       LineNumberTable:
-        line 4: 0
+        line 7: 0
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
             0       5     0  this   Lcom/newardassociates/demo/Outer$Inner;

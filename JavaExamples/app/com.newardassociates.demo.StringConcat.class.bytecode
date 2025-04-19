@@ -1,14 +1,14 @@
 Classfile /mnt/c/Users/Ted/Projects/Demos/Demo-JVM-Bytecode/JavaExamples/app/build/classes/java/main/com/newardassociates/demo/StringConcat.class
-  Last modified Apr 13, 2025; size 883 bytes
-  SHA-256 checksum 6b115f26fc515176cffe7f8b8cc2bdd48be6434c109208b7406560fe31a3ce54
+  Last modified Apr 18, 2025; size 1294 bytes
+  SHA-256 checksum 292fd0f798d0eac025face41704486dec361f946a5278cb5cf7ec8c16c8deb97
   Compiled from "StringConcat.java"
 public class com.newardassociates.demo.StringConcat
   minor version: 0
   major version: 65
   flags: (0x0021) ACC_PUBLIC, ACC_SUPER
-  this_class: #11                         // com/newardassociates/demo/StringConcat
+  this_class: #33                         // com/newardassociates/demo/StringConcat
   super_class: #2                         // java/lang/Object
-  interfaces: 0, fields: 0, methods: 2, attributes: 3
+  interfaces: 0, fields: 0, methods: 3, attributes: 3
 Constant pool:
    #1 = Methodref          #2.#3          // java/lang/Object."<init>":()V
    #2 = Class              #4             // java/lang/Object
@@ -20,35 +20,59 @@ Constant pool:
    #8 = NameAndType        #9:#10         // makeConcatWithConstants:(II)Ljava/lang/String;
    #9 = Utf8               makeConcatWithConstants
   #10 = Utf8               (II)Ljava/lang/String;
-  #11 = Class              #12            // com/newardassociates/demo/StringConcat
-  #12 = Utf8               com/newardassociates/demo/StringConcat
-  #13 = Utf8               Code
-  #14 = Utf8               LineNumberTable
-  #15 = Utf8               LocalVariableTable
-  #16 = Utf8               this
-  #17 = Utf8               Lcom/newardassociates/demo/StringConcat;
-  #18 = Utf8               concatThis
-  #19 = Utf8               ()Ljava/lang/String;
-  #20 = Utf8               x
-  #21 = Utf8               I
-  #22 = Utf8               y
-  #23 = Utf8               SourceFile
-  #24 = Utf8               StringConcat.java
-  #25 = Utf8               BootstrapMethods
-  #26 = String             #27            // (\u0001,\u0001)
-  #27 = Utf8               (\u0001,\u0001)
-  #28 = MethodHandle       6:#29          // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
-  #29 = Methodref          #30.#31        // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
-  #30 = Class              #32            // java/lang/invoke/StringConcatFactory
-  #31 = NameAndType        #9:#33         // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
-  #32 = Utf8               java/lang/invoke/StringConcatFactory
-  #33 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
-  #34 = Utf8               InnerClasses
-  #35 = Class              #36            // java/lang/invoke/MethodHandles$Lookup
-  #36 = Utf8               java/lang/invoke/MethodHandles$Lookup
-  #37 = Class              #38            // java/lang/invoke/MethodHandles
-  #38 = Utf8               java/lang/invoke/MethodHandles
-  #39 = Utf8               Lookup
+  #11 = Class              #12            // java/lang/StringBuffer
+  #12 = Utf8               java/lang/StringBuffer
+  #13 = String             #14            // (
+  #14 = Utf8               (
+  #15 = Methodref          #11.#16        // java/lang/StringBuffer."<init>":(Ljava/lang/String;)V
+  #16 = NameAndType        #5:#17         // "<init>":(Ljava/lang/String;)V
+  #17 = Utf8               (Ljava/lang/String;)V
+  #18 = Methodref          #11.#19        // java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+  #19 = NameAndType        #20:#21        // append:(I)Ljava/lang/StringBuffer;
+  #20 = Utf8               append
+  #21 = Utf8               (I)Ljava/lang/StringBuffer;
+  #22 = String             #23            // ,
+  #23 = Utf8               ,
+  #24 = Methodref          #11.#25        // java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+  #25 = NameAndType        #20:#26        // append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+  #26 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuffer;
+  #27 = String             #28            // )
+  #28 = Utf8               )
+  #29 = Methodref          #11.#30        // java/lang/StringBuffer.toString:()Ljava/lang/String;
+  #30 = NameAndType        #31:#32        // toString:()Ljava/lang/String;
+  #31 = Utf8               toString
+  #32 = Utf8               ()Ljava/lang/String;
+  #33 = Class              #34            // com/newardassociates/demo/StringConcat
+  #34 = Utf8               com/newardassociates/demo/StringConcat
+  #35 = Utf8               Code
+  #36 = Utf8               LineNumberTable
+  #37 = Utf8               LocalVariableTable
+  #38 = Utf8               this
+  #39 = Utf8               Lcom/newardassociates/demo/StringConcat;
+  #40 = Utf8               concatThis
+  #41 = Utf8               x
+  #42 = Utf8               I
+  #43 = Utf8               y
+  #44 = Utf8               stringBufferThis
+  #45 = Utf8               sb
+  #46 = Utf8               Ljava/lang/StringBuffer;
+  #47 = Utf8               SourceFile
+  #48 = Utf8               StringConcat.java
+  #49 = Utf8               BootstrapMethods
+  #50 = String             #51            // (\u0001,\u0001)
+  #51 = Utf8               (\u0001,\u0001)
+  #52 = MethodHandle       6:#53          // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #53 = Methodref          #54.#55        // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #54 = Class              #56            // java/lang/invoke/StringConcatFactory
+  #55 = NameAndType        #9:#57         // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #56 = Utf8               java/lang/invoke/StringConcatFactory
+  #57 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #58 = Utf8               InnerClasses
+  #59 = Class              #60            // java/lang/invoke/MethodHandles$Lookup
+  #60 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #61 = Class              #62            // java/lang/invoke/MethodHandles
+  #62 = Utf8               java/lang/invoke/MethodHandles
+  #63 = Utf8               Lookup
 {
   public com.newardassociates.demo.StringConcat();
     descriptor: ()V
@@ -59,7 +83,7 @@ Constant pool:
          1: invokespecial #1                  // Method java/lang/Object."<init>":()V
          4: return
       LineNumberTable:
-        line 3: 0
+        line 6: 0
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
             0       5     0  this   Lcom/newardassociates/demo/StringConcat;
@@ -78,18 +102,66 @@ Constant pool:
          7: invokedynamic #7,  0              // InvokeDynamic #0:makeConcatWithConstants:(II)Ljava/lang/String;
         12: areturn
       LineNumberTable:
-        line 5: 0
-        line 6: 2
-        line 8: 5
+        line 8: 0
+        line 9: 2
+        line 11: 5
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
             2      11     0     x   I
             5       8     1     y   I
+
+  public static java.lang.String stringBufferThis();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=0
+         0: iconst_5
+         1: istore_0
+         2: bipush        7
+         4: istore_1
+         5: new           #11                 // class java/lang/StringBuffer
+         8: dup
+         9: ldc           #13                 // String (
+        11: invokespecial #15                 // Method java/lang/StringBuffer."<init>":(Ljava/lang/String;)V
+        14: astore_2
+        15: aload_2
+        16: iload_0
+        17: invokevirtual #18                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+        20: pop
+        21: aload_2
+        22: ldc           #22                 // String ,
+        24: invokevirtual #24                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+        27: pop
+        28: aload_2
+        29: iload_1
+        30: invokevirtual #18                 // Method java/lang/StringBuffer.append:(I)Ljava/lang/StringBuffer;
+        33: pop
+        34: aload_2
+        35: ldc           #27                 // String )
+        37: invokevirtual #24                 // Method java/lang/StringBuffer.append:(Ljava/lang/String;)Ljava/lang/StringBuffer;
+        40: pop
+        41: aload_2
+        42: invokevirtual #29                 // Method java/lang/StringBuffer.toString:()Ljava/lang/String;
+        45: areturn
+      LineNumberTable:
+        line 14: 0
+        line 15: 2
+        line 17: 5
+        line 18: 15
+        line 19: 21
+        line 20: 28
+        line 21: 34
+        line 22: 41
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            2      44     0     x   I
+            5      41     1     y   I
+           15      31     2    sb   Ljava/lang/StringBuffer;
 }
 SourceFile: "StringConcat.java"
 BootstrapMethods:
-  0: #28 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  0: #52 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
     Method arguments:
-      #26 (\u0001,\u0001)
+      #50 (\u0001,\u0001)
 InnerClasses:
-  public static final #39= #35 of #37;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+  public static final #63= #59 of #61;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
