@@ -16,6 +16,3 @@ This is an example of using the OWeb ASM library to generate a class from pure e
 
 ## Javassist
 Hacking away at Java classes using the Javassist library.
-
-## ByteBuddy (FORTHCOMING)
-Hacking away at Java classes using the ByteBuddy library.
