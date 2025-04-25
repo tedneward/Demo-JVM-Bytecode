@@ -57,7 +57,7 @@ open class Javap: DefaultTask() {
                         .start()
 
                 proc.waitFor(60, TimeUnit.MINUTES)
-                println("Success processing ${classFile}")
+                println("Disassembled ${classFile} to ${outputFile}")
             } catch(e: Exception) {
                 e.printStackTrace()
                 println("Failure processing ${classFile}: ${e.message}")
@@ -73,10 +73,12 @@ tasks.register<Javap>("disasm") {
     outputDir = ""
     classFiles = listOf(
         "com/newardassociates/demo/App.class",
+        "com/newardassociates/demo/Assertions.class",
         "com/newardassociates/demo/Greeter.class",
         "com/newardassociates/demo/Math.class",
         "com/newardassociates/demo/Outer.class",
         "com/newardassociates/demo/Outer\$Inner.class",
+        "com/newardassociates/demo/Records.class",
         "com/newardassociates/demo/StringConcat.class",
         "com/newardassociates/demo/Varargs.class",
     )

@@ -8,6 +8,9 @@ The root of this project directory has a script, "disasm"/"disasm.bat", that kno
 
 The app Gradle script (`build.gradle.kts`) also has two targets, `disasm` and `disasm-kotlin`, that will invoke `javap` on the compiled classfiles and pump the output into fully-qualified-classname "bytecode" files in the root of the app directory. (There's also a similar set in the "src" directories, but only because I use them as references for my presentations--they might be slightly out-of-sync at any given time.)
 
+## ClassFile
+Some demonstrations of the Java24+ java.lang.classfile (and close friends) package.
+
 ## jasm
 This is an example showing how to use the "jasm" Java assembler. Note that the Gradle plugin (and the assembler itself, I think) is officially archived, so don't expect anything by way of support for it. That said, the JVM bytecode set hasn't changed much, so it's not like there needs to be much, if you ask me.
 
@@ -16,3 +19,11 @@ This is an example of using the OWeb ASM library to generate a class from pure e
 
 ## Javassist
 Hacking away at Java classes using the Javassist library.
+
+## ByteBuddy
+TODO
+
+## Future plans
+BCEL
+
+ProGuard

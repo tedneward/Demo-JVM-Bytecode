@@ -1,0 +1,124 @@
+Classfile /mnt/c/Users/Ted/Projects/Demos/Demo-JVM-Bytecode/JavaExamples/app/build/classes/java/main/com/newardassociates/demo/Assertions.class
+  Last modified Apr 24, 2025; size 740 bytes
+  SHA-256 checksum 04df89e610ad243ce1fce2b954a8d5c00626344c83bbc599aa094b462dbcf2d7
+  Compiled from "Assertions.java"
+public class com.newardassociates.demo.Assertions
+  minor version: 0
+  major version: 65
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #8                          // com/newardassociates/demo/Assertions
+  super_class: #2                         // java/lang/Object
+  interfaces: 0, fields: 1, methods: 3, attributes: 1
+Constant pool:
+   #1 = Methodref          #2.#3          // java/lang/Object."<init>":()V
+   #2 = Class              #4             // java/lang/Object
+   #3 = NameAndType        #5:#6          // "<init>":()V
+   #4 = Utf8               java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = Fieldref           #8.#9          // com/newardassociates/demo/Assertions.$assertionsDisabled:Z
+   #8 = Class              #10            // com/newardassociates/demo/Assertions
+   #9 = NameAndType        #11:#12        // $assertionsDisabled:Z
+  #10 = Utf8               com/newardassociates/demo/Assertions
+  #11 = Utf8               $assertionsDisabled
+  #12 = Utf8               Z
+  #13 = Class              #14            // java/lang/AssertionError
+  #14 = Utf8               java/lang/AssertionError
+  #15 = Methodref          #13.#3         // java/lang/AssertionError."<init>":()V
+  #16 = Class              #17            // java/lang/String
+  #17 = Utf8               java/lang/String
+  #18 = Methodref          #19.#20        // java/lang/Class.desiredAssertionStatus:()Z
+  #19 = Class              #21            // java/lang/Class
+  #20 = NameAndType        #22:#23        // desiredAssertionStatus:()Z
+  #21 = Utf8               java/lang/Class
+  #22 = Utf8               desiredAssertionStatus
+  #23 = Utf8               ()Z
+  #24 = Utf8               Code
+  #25 = Utf8               LineNumberTable
+  #26 = Utf8               LocalVariableTable
+  #27 = Utf8               this
+  #28 = Utf8               Lcom/newardassociates/demo/Assertions;
+  #29 = Utf8               main
+  #30 = Utf8               ([Ljava/lang/String;)V
+  #31 = Utf8               args
+  #32 = Utf8               [Ljava/lang/String;
+  #33 = Utf8               StackMapTable
+  #34 = Utf8               <clinit>
+  #35 = Utf8               SourceFile
+  #36 = Utf8               Assertions.java
+{
+  static final boolean $assertionsDisabled;
+    descriptor: Z
+    flags: (0x1018) ACC_STATIC, ACC_FINAL, ACC_SYNTHETIC
+
+  public com.newardassociates.demo.Assertions();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/newardassociates/demo/Assertions;
+
+  public static void main(java.lang.String...);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0089) ACC_PUBLIC, ACC_STATIC, ACC_VARARGS
+    Code:
+      stack=2, locals=1, args_size=1
+         0: getstatic     #7                  // Field $assertionsDisabled:Z
+         3: ifne          18
+         6: aload_0
+         7: ifnonnull     18
+        10: new           #13                 // class java/lang/AssertionError
+        13: dup
+        14: invokespecial #15                 // Method java/lang/AssertionError."<init>":()V
+        17: athrow
+        18: getstatic     #7                  // Field $assertionsDisabled:Z
+        21: ifne          41
+        24: aload_0
+        25: iconst_0
+        26: aaload
+        27: instanceof    #16                 // class java/lang/String
+        30: ifne          41
+        33: new           #13                 // class java/lang/AssertionError
+        36: dup
+        37: invokespecial #15                 // Method java/lang/AssertionError."<init>":()V
+        40: athrow
+        41: return
+      LineNumberTable:
+        line 5: 0
+        line 6: 18
+        line 7: 41
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      42     0  args   [Ljava/lang/String;
+      StackMapTable: number_of_entries = 2
+        frame_type = 18 /* same */
+        frame_type = 22 /* same */
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: ldc           #8                  // class com/newardassociates/demo/Assertions
+         2: invokevirtual #18                 // Method java/lang/Class.desiredAssertionStatus:()Z
+         5: ifne          12
+         8: iconst_1
+         9: goto          13
+        12: iconst_0
+        13: putstatic     #7                  // Field $assertionsDisabled:Z
+        16: return
+      LineNumberTable:
+        line 3: 0
+      StackMapTable: number_of_entries = 2
+        frame_type = 12 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+}
+SourceFile: "Assertions.java"
